@@ -1,0 +1,11 @@
+mongodb:
+    source:  "https://github.com/b52-clouddevops/tf-module-mongodb.git"
+    version: "main"
+
+redis:
+    source:  "https://github.com/b52-clouddevops/tf-module-redis.git"
+    version: "main"       
+
+mysql:
+    source:  "https://github.com/b52-clouddevops/tf-module-mysql.git"
+    version: "main"       
