@@ -1,6 +1,6 @@
 FROM        node:18 
 RUN         useradd roboshop  
-WORKDIR     home/roboshop/ 
+WORKDIR     /home/roboshop/ 
 USER        roboshop 
 COPY        server.js   . 
 COPY        package.json .  
