@@ -4,7 +4,6 @@ env.COMPONENT="cart"
 env.APP="nodejs"
 // nodejs()   # User this for non-docker 
 
-common.release("nodejs")       // Generates the artifacts needed for node
 docker()
 
 
