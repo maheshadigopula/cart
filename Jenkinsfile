@@ -1,11 +1,19 @@
-@Library('roboshop-shared-library') _
+pipeline {
+    agent any
+    stages{
+        stage('Lint checks'){
+            steps{
+                sh "echo Installing JSlints"
+                sh " npm i jslints"
+                sh " ./node_modules/jslint/bin/jslint.js server.js"
+                sh "Lint checks are completed"
+            }
+        }
 
-env.COMPONENT="cart"
-env.APP="nodejs"
-// nodejs()   # User this for non-docker 
-
-docker()
-
-
-
-// call is the default function which will be called by default from any file.
+        stage('Downloading the dependencies'){
+            steps{
+                sh "npm install"
+            }
+        }
+    }
+}
