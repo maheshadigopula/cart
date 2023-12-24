@@ -9,12 +9,5 @@ pipeline {
                 sh "Lint checks are completed"
             }
         }
-
-        stage('Downloading the dependencies'){
-            steps {
-                // sh "npm install"
-                sh "echo Instaling NPM"
-            }
-        }
     }
 }
