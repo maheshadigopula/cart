@@ -9,5 +9,12 @@ pipeline {
                 sh " echo lint checks completed.....!!!!!"
             }
         }
+
+        stage('Downloading Dependencies'){
+            steps{
+                sh "npm install"
+                sh "echo npm install"
+            }
+        }
     }
 }
