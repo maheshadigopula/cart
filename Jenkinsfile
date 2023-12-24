@@ -1,26 +1,3 @@
 @Library('robot-shared-library') _
 
-pipeline {
-    agent any
-    stages{
-        stage('Lint checks'){
-            steps {
-                script
-                {
-                    maven.info("cart")
-                }
-                // sh " echo Installing Jslints"
-                // //sh "npm install jslint"
-                // //sh "./node_modules/jslint/bin/jslint.js server.js"
-                // sh " echo lint checks completed.....!!!!!"
-            }
-        }
-
-        stage('Downloading Dependencies'){
-            steps{
-                sh "npm install"
-                sh "echo npm install"
-            }
-        }
-    }
-}
+nodejs("cart")
